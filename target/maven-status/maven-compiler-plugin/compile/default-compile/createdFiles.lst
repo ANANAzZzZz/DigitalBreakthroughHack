@@ -21,4 +21,5 @@ suai\vladislav\omskhack\auth\AuthenticationRequest$AuthenticationRequestBuilder.
 suai\vladislav\omskhack\config\JwtAuthenticationFilter.class
 suai\vladislav\omskhack\auth\AuthenticationResponse.class
 suai\vladislav\omskhack\auth\RegisterRequest$RegisterRequestBuilder.class
+suai\vladislav\omskhack\config\WebConfiguration.class
 suai\vladislav\omskhack\dto\Position.class
