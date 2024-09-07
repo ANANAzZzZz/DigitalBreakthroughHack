@@ -147,7 +147,7 @@ public class presentationController {
             }
 
             // Сохранение презентации
-            try (FileOutputStream out = new FileOutputStream("complex_presentation.pptx")) {
+            try (FileOutputStream out = new FileOutputStream("/home/admin/untitledHack/complex_presentation.pptx")) {
                 ppt.write(out);
             }
 
@@ -162,7 +162,7 @@ public class presentationController {
     @GetMapping("/presentation")
     public ResponseEntity<InputStreamResource> downloadFile() throws IOException {
         // Путь к файлу
-        File file = new File("complex_presentation.pptx");
+        File file = new File("/home/admin/untitledHack/complex_presentation.pptx");
 
         if (!file.exists()) {
             return ResponseEntity.notFound().build(); // Возвращает 404, если файл не найден
