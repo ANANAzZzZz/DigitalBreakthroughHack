@@ -1,0 +1,47 @@
+{
+  "title": "Комплексная презентация",
+  "slides": [
+    {
+      "title": "Введение",
+      "elements": [
+        {
+          "type": "text",
+          "content": "Добро пожаловать в презентацию.",
+          "position": {"x": 50, "y": 100, "width": 600, "height": 100},
+          "fontSize": 24
+        },
+        {
+          "type": "image",
+          "src": "D:\\Code\\omskHack\\src\\main\\java\\suai\\vladislav\\omskhack\\controllers\\Танк_Т-100.jpg",
+          "position": {"x": 50, "y": 250, "width": 300, "height": 200}
+        }
+      ]
+    },
+    {
+      "title": "Таблица данных",
+      "elements": [
+        {
+          "type": "table",
+          "headers": ["Наименование", "Количество", "Цена"],
+          "rows": [
+            ["Товар 1", "10", "100"],
+            ["Товар 2", "5", "200"],
+            ["Товар 3", "2", "300"]
+          ],
+          "position": {"x": 50, "y": 100, "width": 600, "height": 300}
+        }
+      ]
+    },
+    {
+      "title": "Заключение",
+      "elements": [
+        {
+          "type": "text",
+          "content": "Спасибо за внимание!",
+          "position": {"x": 50, "y": 100, "width": 600, "height": 100},
+          "fontSize": 28
+        }
+      ]
+    }
+  ]
+}
