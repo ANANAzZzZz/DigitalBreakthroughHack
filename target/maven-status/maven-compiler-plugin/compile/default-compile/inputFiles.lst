@@ -2,6 +2,7 @@ D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\auth\RegisterRequest.java
 D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\user\User.java
 D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\user\UserRepository.java
 D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\config\JwtAuthenticationFilter.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\controllers\presentationController.java
 D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\user\Role.java
 D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\auth\AuthenticationTokenRequest.java
 D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\config\ApplicationConfig.java

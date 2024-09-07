@@ -14,6 +14,7 @@ suai\vladislav\omskhack\config\JwtAuthenticationFilter.class
 suai\vladislav\omskhack\auth\AuthenticationResponse$AuthenticationResponseBuilder.class
 suai\vladislav\omskhack\auth\AuthenticationResponse.class
 suai\vladislav\omskhack\config\SecurityConfiguration.class
+suai\vladislav\omskhack\controllers\presentationController.class
 suai\vladislav\omskhack\auth\RegisterRequest$RegisterRequestBuilder.class
 suai\vladislav\omskhack\user\Role.class
 suai\vladislav\omskhack\auth\AuthenticationService.class
