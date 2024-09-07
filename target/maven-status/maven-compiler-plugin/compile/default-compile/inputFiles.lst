@@ -1,0 +1,14 @@
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\auth\RegisterRequest.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\user\User.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\user\UserRepository.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\config\JwtAuthenticationFilter.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\user\Role.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\auth\AuthenticationTokenRequest.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\config\ApplicationConfig.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\auth\AuthenticationRequest.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\auth\AuthenticationResponse.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\auth\AuthenticationController.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\config\SecurityConfiguration.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\OmskHackApplication.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\config\JwtService.java
+D:\Code\omskHack\src\main\java\suai\vladislav\omskhack\auth\AuthenticationService.java
