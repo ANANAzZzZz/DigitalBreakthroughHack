@@ -105,7 +105,11 @@
             <version>24.8</version>
             <classifier>javadoc</classifier>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version> <!-- Убедитесь, что используете последнюю версию -->
+        </dependency>
     </dependencies>
     <repositories>
     <repository>
