@@ -8,11 +8,11 @@ import org.apache.poi.xslf.usermodel.*;
 
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import suai.vladislav.omskhack.dto.Response;
 
 import java.awt.*;
 import java.io.File;
@@ -23,15 +23,10 @@ import java.io.IOException;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/auth")
 public class presentationController {
-    @GetMapping("/presentation")
-    public String createPresentation() {
-        ObjectMapper objectMapper = new ObjectMapper();
-
-        try (FileInputStream fis = new FileInputStream("src/main/java/suai/vladislav/omskhack/controllers/1725712237230output.json")) {
-            JsonNode rootNode = objectMapper.readTree(fis);
-
+    @PostMapping("/presentation")
+    public ResponseEntity<?> createPresentation(@RequestBody JsonNode rootNode) {
+        try {
             // Создание презентации
             XMLSlideShow ppt = new XMLSlideShow();
 
@@ -149,10 +144,10 @@ public class presentationController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return "test";
+        return new ResponseEntity<>("Презентация успешно сгенерирована и доступна для скачивания", HttpStatus.OK);
     }
 
-    @GetMapping("/download")
+    @GetMapping("/presentation")
     public ResponseEntity<InputStreamResource> downloadFile() throws IOException {
         // Путь к файлу
         File file = new File("complex_presentation.pptx");
