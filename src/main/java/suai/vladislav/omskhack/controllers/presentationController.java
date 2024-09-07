@@ -15,10 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import suai.vladislav.omskhack.dto.Response;
 
 import java.awt.*;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.util.Base64;
 
 
 @RestController
@@ -73,12 +71,21 @@ public class presentationController {
                             break;
 
                         case "image":
-                            // Добавление изображения
-                            String imagePath = elementNode.path("src").asText();
+                            // Добавление изображения из Base64
+                            String imageBase64 = elementNode.path("src").asText(); // В JSON вместо пути хранится Base64 строка
                             JsonNode imagePosition = elementNode.path("position");
 
-                            try (FileInputStream imageInputStream = new FileInputStream(imagePath)) {
+                            try {
+                                // Декодирование Base64 строки в массив байтов
+                                byte[] imageBytes = Base64.getDecoder().decode(imageBase64);
+
+                                // Создание InputStream из массива байтов
+                                ByteArrayInputStream imageInputStream = new ByteArrayInputStream(imageBytes);
+
+                                // Определение типа изображения (JPEG используется как пример, можно адаптировать под нужный формат)
                                 XSLFPictureData pictureData = ppt.addPicture(imageInputStream, PictureData.PictureType.JPEG);
+
+                                // Добавление изображения на слайд
                                 XSLFPictureShape pictureShape = slide.createPicture(pictureData);
                                 pictureShape.setAnchor(new Rectangle(
                                         imagePosition.path("x").asInt(),
@@ -86,8 +93,13 @@ public class presentationController {
                                         imagePosition.path("width").asInt(),
                                         imagePosition.path("height").asInt()
                                 ));
+                            } catch (IllegalArgumentException e) {
+                                // Обработка ошибки декодирования Base64
+                                System.out.println("Ошибка при декодировании изображения из Base64.");
+                                e.printStackTrace();
                             } catch (IOException e) {
-                                System.out.println("Ошибка при загрузке изображения: " + imagePath);
+                                // Обработка ошибки при добавлении изображения в презентацию
+                                System.out.println("Ошибка при добавлении изображения в презентацию.");
                                 e.printStackTrace();
                             }
                             break;
